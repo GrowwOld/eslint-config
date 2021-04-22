@@ -1,31 +1,6 @@
 module.exports = {
     "parser": "@typescript-eslint/parser",
     "extends": ["plugin:import/errors"],
-    "env": {
-        "browser": true,
-        "node": true,
-        "jest": true,
-        "es6": true
-    },
-    "globals": {
-        "__BROWSER__": false,
-        "__PWA_ENV__": false,
-        "__LOCAL__": false
-    },
-    "parserOptions": {
-        "ecmaVersion": 10,
-        "ecmaFeatures": {
-            "jsx": true,
-            "modules": true
-        }
-    },
-    "settings": {
-        "import/resolver": {
-            "webpack": {
-                "config": "./webpack.config.js"
-            }
-        }
-    },
     "plugins": ["react", "@typescript-eslint"],
     "rules": {
         //------react/jsx rules-------
