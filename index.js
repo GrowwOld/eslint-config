@@ -2,6 +2,19 @@ module.exports = {
     "parser": "@typescript-eslint/parser",
     "extends": ["plugin:import/errors"],
     "plugins": ["react", "@typescript-eslint"],
+    "parserOptions": {
+        "ecmaVersion": 10,
+        "ecmaFeatures": {
+            "jsx": true,
+            "modules": true
+        }
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "jest": true,
+        "es6": true
+    },
     "rules": {
         //------react/jsx rules-------
 
