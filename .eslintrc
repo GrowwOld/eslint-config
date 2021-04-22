@@ -138,7 +138,8 @@
     "func-call-spacing": ["warn", "never"],
 
     //maxiumum 2 spaces indentation
-    "indent": [
+    "indent": "off",
+    "@typescript-eslint/indent": [
       "error",
       2,
       {
