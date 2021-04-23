@@ -8,11 +8,11 @@ Standard Eslint config adopted in Groww. Customized as per requirement and prefe
   npx install-peerdeps --dev @groww-tech/eslint-config
   ```  
 
-  If using npm<5 use this shortcut
+  If using npm <5 use this
   ```sh
   npm info "@groww-tech/eslint-config@latest" peerDependencies
   ```
-  then 
+  then install those packages.
 
   ```sh
   npm install --save-dev "@groww-tech/eslint-config"
