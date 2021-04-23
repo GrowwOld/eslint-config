@@ -5,6 +5,11 @@ Standard Eslint config adopted in Groww. Customized as per requirement and prefe
 1. Install the correct versions of each package, which are listed by the command:
 
   ```sh
+  npx install-peerdeps --dev @groww-tech/eslint-config
+  ```  
+
+  If using npm<5 use this shortcut
+  ```sh
   npm info "@groww-tech/eslint-config@latest" peerDependencies
   ```
   then 
@@ -12,12 +17,5 @@ Standard Eslint config adopted in Groww. Customized as per requirement and prefe
   ```sh
   npm install --save-dev "@groww-tech/eslint-config"
   ```
-
-  If using **npm 5+**, use this shortcut
-
-  ```sh
-  npx install-peerdeps --dev @groww-tech/eslint-config
-  ```  
-
 
 2. Add `"extends": "@groww-tech/eslint-config"` to your `.eslintrc`
