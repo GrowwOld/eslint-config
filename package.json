@@ -43,9 +43,9 @@
   },
   "homepage": "https://github.com/Groww/eslint-config#readme",
   "devDependencies": {
-    "eslint": "^7.22.0",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
+    "eslint": "^7.22.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-react": "^7.23.1"
   },
