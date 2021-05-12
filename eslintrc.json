@@ -1,0 +1,183 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": ["plugin:import/errors"],
+  "plugins": ["react", "@typescript-eslint"],
+  "parserOptions": {
+    "ecmaVersion": 10,
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "es6": true
+  },
+  "rules": {
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+
+    "react/jsx-key": 1,
+
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+
+        "classes": false,
+        "variables": false
+      }
+    ],
+
+    "no-unreachable": "warn",
+
+    "no-unreachable-loop": "warn",
+
+    "no-unused-expressions": [
+      "warn",
+      {
+        "allowShortCircuit": true,
+        "allowTernary": true,
+        "allowTaggedTemplates": true
+      }
+    ],
+
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "none",
+        "caughtErrors": "none",
+        "ignoreRestSiblings": true,
+        "vars": "all"
+      }
+    ],
+
+    "no-var": "warn",
+
+    "arrow-spacing": ["warn", { "before": true, "after": true }],
+
+    "block-spacing": ["warn", "always"],
+
+    "brace-style": ["warn", "1tbs", { "allowSingleLine": true }],
+
+    "comma-dangle": [
+      "warn",
+      {
+        "arrays": "never",
+        "objects": "never",
+        "imports": "never",
+        "exports": "never",
+        "functions": "never"
+      }
+    ],
+
+    "comma-spacing": ["warn", { "before": false, "after": true }],
+
+    "comma-style": ["warn", "last"],
+
+    "dot-location": ["warn", "property"],
+
+    "eol-last": "error",
+
+    "eqeqeq": ["warn", "always", { "null": "ignore" }],
+
+    "func-call-spacing": ["warn", "never"],
+
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1,
+        "VariableDeclarator": 1,
+        "MemberExpression": 1,
+        "FunctionDeclaration": { "parameters": 1, "body": 1 },
+        "FunctionExpression": { "parameters": 1, "body": 1 },
+        "CallExpression": { "arguments": 1 },
+        "ArrayExpression": 1,
+        "ObjectExpression": 1,
+        "ImportDeclaration": 1,
+        "ignoreComments": true,
+        "flatTernaryExpressions": true,
+        "offsetTernaryExpressions": false
+      }
+    ],
+
+    "object-curly-spacing": ["warn", "always"],
+
+    "key-spacing": ["warn", { "beforeColon": false, "afterColon": true }],
+
+    "keyword-spacing": ["warn", { "before": true, "after": true }],
+
+    "lines-between-class-members": [
+      "warn",
+      "always",
+      { "exceptAfterSingleLine": true }
+    ],
+
+    "no-console": ["warn", { "allow": ["error"] }],
+
+    "no-fallthrough": "warn",
+
+    "no-func-assign": "error",
+
+    "no-global-assign": "error",
+
+    "no-import-assign": "error",
+
+    "no-irregular-whitespace": "error",
+
+    "no-mixed-operators": [
+      "warn",
+      {
+        "groups": [
+          ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
+          ["&&", "||"],
+          ["in", "instanceof"]
+        ],
+        "allowSamePrecedence": true
+      }
+    ],
+
+    "no-mixed-spaces-and-tabs": "error",
+
+    "no-multi-spaces": ["warn", { "ignoreEOLComments": true }],
+
+    "no-multiple-empty-lines": ["warn", { "max": 2, "maxEOF": 0 }],
+
+    "no-self-assign": ["error", { "props": true }],
+
+    "no-self-compare": "error",
+
+    "no-sequences": "error",
+
+    "no-shadow-restricted-names": "error",
+
+    "no-tabs": "error",
+
+    "no-template-curly-in-string": "warn",
+
+    "no-trailing-spaces": "warn",
+
+    "no-undef": "warn",
+
+    "no-unexpected-multiline": "warn",
+
+    "no-unmodified-loop-condition": "warn",
+
+    "valid-typeof": ["warn", { "requireStringLiterals": true }]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "plugins": ["import"],
+      "rules": {
+        "import/named": "off",
+        "no-unused-vars": "off",
+        "no-undef": "off"
+      }
+    }
+  ]
+}
