@@ -1,7 +1,7 @@
 module.exports = {
     "parser": "@typescript-eslint/parser",
-    "extends": ["plugin:import/errors"],
-    "plugins": ["react", "@typescript-eslint"],
+    "extends": [ "plugin:import/errors" ],
+    "plugins": [ "react", "@typescript-eslint" ],
     "parserOptions": {
         "ecmaVersion": 10,
         "ecmaFeatures": {
@@ -31,7 +31,7 @@ module.exports = {
         //fix with typescript eslint
 
         "no-use-before-define": "off",
-        "@typescript-eslint/no-use-before-define": ["error",
+        "@typescript-eslint/no-use-before-define": [ "error",
             {
                 "functions": false,
                 //to be enabled for classed and variables
@@ -71,13 +71,13 @@ module.exports = {
         //"array-bracket-spacing": ["warn", "never"], future discuss
 
         //spacing in arrow function formating
-        "arrow-spacing": ["warn", { "before": true, "after": true }],
+        "arrow-spacing": [ "warn", { "before": true, "after": true } ],
 
         //space after {} in blocks
-        "block-spacing": ["warn", "always"],
+        "block-spacing": [ "warn", "always" ],
 
         //brace style discuss formating
-        "brace-style": ["warn", "1tbs", { "allowSingleLine": true }],
+        "brace-style": [ "warn", "1tbs", { "allowSingleLine": true } ],
 
         //use of camelCasing future1
         // "camelcase": [
@@ -101,24 +101,24 @@ module.exports = {
         ],
 
         // a, b not a,b or a ,b formating
-        "comma-spacing": ["warn", { "before": false, "after": true }],
+        "comma-spacing": [ "warn", { "before": false, "after": true } ],
 
         // comma at the last of line in multi line formating
-        "comma-style": ["warn", "last"],
+        "comma-style": [ "warn", "last" ],
 
 
         // dot before property a \n .property()
-        "dot-location": ["warn", "property"],
+        "dot-location": [ "warn", "property" ],
 
 
         // no new lines at end of file formating
         "eol-last": "error",
 
         //use === instead of ==
-        "eqeqeq": ["warn", "always", { "null": "ignore" }],
+        "eqeqeq": [ "warn", "always", { "null": "ignore" } ],
 
         //no foo () always foo()
-        "func-call-spacing": ["warn", "never"],
+        "func-call-spacing": [ "warn", "never" ],
 
         //maxiumum 2 spaces indentation
         "indent": [
@@ -141,13 +141,13 @@ module.exports = {
         ],
 
 
-        "object-curly-spacing": ["warn", "always"],
+        "object-curly-spacing": [ "warn", "always" ],
 
         //key spacing a: b no a:b or a :b formating
-        "key-spacing": ["warn", { "beforeColon": false, "afterColon": true }],
+        "key-spacing": [ "warn", { "beforeColon": false, "afterColon": true } ],
 
         //space after keywords
-        "keyword-spacing": ["warn", { "before": true, "after": true }],
+        "keyword-spacing": [ "warn", { "before": true, "after": true } ],
 
         // space betwwen to class members unless singline
         "lines-between-class-members": [
@@ -157,7 +157,7 @@ module.exports = {
         ],
 
         //warn at the use of console
-        "no-console": ["warn", { "allow": ["error"] }],
+        "no-console": [ "warn", { "allow": [ "error" ] } ],
 
         //the ability to "fall through" from one case to the next.
         "no-fallthrough": "warn",
@@ -177,9 +177,9 @@ module.exports = {
             "warn",
             {
                 "groups": [
-                    ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
-                    ["&&", "||"],
-                    ["in", "instanceof"]
+                    [ "==", "!=", "===", "!==", ">", ">=", "<", "<=" ],
+                    [ "&&", "||" ],
+                    [ "in", "instanceof" ]
                 ],
                 "allowSamePrecedence": true
             }
@@ -189,14 +189,14 @@ module.exports = {
         "no-mixed-spaces-and-tabs": "error",
 
         //
-        "no-multi-spaces": ["warn", { "ignoreEOLComments": true }],
+        "no-multi-spaces": [ "warn", { "ignoreEOLComments": true } ],
 
         //"no-multi-str": "error",
 
-        "no-multiple-empty-lines": ["warn", { "max": 2, "maxEOF": 0 }],
+        "no-multiple-empty-lines": [ "warn", { "max": 2, "maxEOF": 0 } ],
 
         //foo = foo
-        "no-self-assign": ["error", { "props": true }],
+        "no-self-assign": [ "error", { "props": true } ],
 
         // foo === foo
         "no-self-compare": "error",
@@ -230,7 +230,48 @@ module.exports = {
         // no modification in loop
         "no-unmodified-loop-condition": "warn",
 
-        "valid-typeof": ["warn", { "requireStringLiterals": true }]
+        "valid-typeof": [ "warn", { "requireStringLiterals": true } ],
+
+        "padding-line-between-statements": [
+            "error",
+            {
+                "blankLine": "always",
+                "prev": [
+                    "const",
+                    "let",
+                    "var"
+                ],
+                "next": "*"
+            },
+            {
+                "blankLine": "any",
+                "prev": [
+                    "const",
+                    "let",
+                    "var"
+                ],
+                "next": [
+                    "const",
+                    "let",
+                    "var"
+                ]
+            },
+            {
+                "blankLine": "always",
+                "prev": [
+                    "case",
+                    "default"
+                ],
+                "next": "*"
+            },
+            {
+                "blankLine": "always",
+                "prev": [
+                    "block-like"
+                ],
+                "next": "*"
+            }
+        ]
 
         // "computed-property-spacing": [
         //   "error",
@@ -401,8 +442,8 @@ module.exports = {
     },
     "overrides": [
         {
-            "files": ["*.ts", "*.tsx"],
-            "plugins": ["import"],
+            "files": [ "*.ts", "*.tsx" ],
+            "plugins": [ "import" ],
             "rules": {
                 //taken care by ts itself
                 "import/named": "off",
