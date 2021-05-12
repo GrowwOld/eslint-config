@@ -1,425 +1,425 @@
 module.exports = {
-  parser: "@typescript-eslint/parser",
-  extends: ["plugin:import/errors"],
-  plugins: ["react", "@typescript-eslint"],
-  parserOptions: {
-    ecmaVersion: 10,
-    ecmaFeatures: {
-      jsx: true,
-      modules: true,
+    parser: "@typescript-eslint/parser",
+    extends: ["plugin:import/errors"],
+    plugins: ["react", "@typescript-eslint"],
+    parserOptions: {
+        ecmaVersion: 10,
+        ecmaFeatures: {
+            jsx: true,
+            modules: true,
+        },
     },
-  },
-  env: {
-    browser: true,
-    node: true,
-    jest: true,
-    es6: true,
-  },
-  rules: {
-    //------react/jsx rules-------
+    env: {
+        browser: true,
+        node: true,
+        jest: true,
+        es6: true,
+    },
+    rules: {
+        //------react/jsx rules-------
 
-    //prevents eslint from throwing React/Component not used error
-    "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error",
+        //prevents eslint from throwing React/Component not used error
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
 
-    //warning on not use of key
-    "react/jsx-key": 1,
+        //warning on not use of key
+        "react/jsx-key": 1,
 
-    //-----js rules------
+        //-----js rules------
 
-    //fix with typescript eslint
+        //fix with typescript eslint
 
-    "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": [
-      "error",
-      {
-        functions: false,
-        //to be enabled for classed and variables
-        classes: false,
-        variables: false,
-      },
-    ],
-
-    "no-unreachable": "warn",
-
-    "no-unreachable-loop": "warn",
-
-    "no-unused-expressions": [
-      "warn",
-      {
-        allowShortCircuit: true,
-        allowTernary: true,
-        allowTaggedTemplates: true,
-      },
-    ],
-
-    "no-unused-vars": [
-      "warn",
-      {
-        args: "none",
-        caughtErrors: "none",
-        ignoreRestSiblings: true,
-        vars: "all",
-      },
-    ],
-
-    //prevent use of var use let/const
-    "no-var": "warn",
-
-    //"array-bracket-spacing": ["warn", "never"], future discuss
-
-    //spacing in arrow function formating
-    "arrow-spacing": ["warn", { before: true, after: true }],
-
-    //space after {} in blocks
-    "block-spacing": ["warn", "always"],
-
-    //brace style discuss formating
-    "brace-style": ["warn", "1tbs", { allowSingleLine: true }],
-
-    //use of camelCasing future1
-    // "camelcase": [
-    //   "error",
-    //   {
-    //     "allow": ["^UNSAFE_"],
-    //     "properties": "never",
-    //     "ignoreGlobals": true
-    //   }
-    // ],
-
-    "comma-dangle": [
-      "warn",
-      {
-        arrays: "never",
-        objects: "never",
-        imports: "never",
-        exports: "never",
-        functions: "never",
-      },
-    ],
-
-    // a, b not a,b or a ,b formating
-    "comma-spacing": ["warn", { before: false, after: true }],
-
-    // comma at the last of line in multi line formating
-    "comma-style": ["warn", "last"],
-
-    // dot before property a \n .property()
-    "dot-location": ["warn", "property"],
-
-    // no new lines at end of file formating
-    "eol-last": "error",
-
-    //use === instead of ==
-    eqeqeq: ["warn", "always", { null: "ignore" }],
-
-    //no foo () always foo()
-    "func-call-spacing": ["warn", "never"],
-
-    //maxiumum 2 spaces indentation
-    indent: [
-      "error",
-      2,
-      {
-        SwitchCase: 1,
-        VariableDeclarator: 1,
-        MemberExpression: 1,
-        FunctionDeclaration: { parameters: 1, body: 1 },
-        FunctionExpression: { parameters: 1, body: 1 },
-        CallExpression: { arguments: 1 },
-        ArrayExpression: 1,
-        ObjectExpression: 1,
-        ImportDeclaration: 1,
-        ignoreComments: true,
-        flatTernaryExpressions: true,
-        offsetTernaryExpressions: false,
-      },
-    ],
-
-    "object-curly-spacing": ["warn", "always"],
-
-    //key spacing a: b no a:b or a :b formating
-    "key-spacing": ["warn", { beforeColon: false, afterColon: true }],
-
-    //space after keywords
-    "keyword-spacing": ["warn", { before: true, after: true }],
-
-    // space betwwen to class members unless singline
-    "lines-between-class-members": [
-      "warn",
-      "always",
-      { exceptAfterSingleLine: true },
-    ],
-
-    //warn at the use of console
-    "no-console": ["warn", { allow: ["error"] }],
-
-    //the ability to "fall through" from one case to the next.
-    "no-fallthrough": "warn",
-
-    "no-func-assign": "error",
-
-    //variable like window cannot be modified
-    "no-global-assign": "error",
-
-    // imported values can't be reassigned
-    "no-import-assign": "error",
-
-    // This rule is aimed at catching invalid whitespace that is not a normal tab and space
-    "no-irregular-whitespace": "error",
-
-    "no-mixed-operators": [
-      "warn",
-      {
-        groups: [
-          ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
-          ["&&", "||"],
-          ["in", "instanceof"],
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": [
+            "error",
+            {
+                functions: false,
+                //to be enabled for classed and variables
+                classes: false,
+                variables: false,
+            },
         ],
-        allowSamePrecedence: true,
-      },
-    ],
 
-    // no tab or spaces
-    "no-mixed-spaces-and-tabs": "error",
+        "no-unreachable": "warn",
 
-    //
-    "no-multi-spaces": ["warn", { ignoreEOLComments: true }],
+        "no-unreachable-loop": "warn",
 
-    //"no-multi-str": "error",
+        "no-unused-expressions": [
+            "warn",
+            {
+                allowShortCircuit: true,
+                allowTernary: true,
+                allowTaggedTemplates: true,
+            },
+        ],
 
-    "no-multiple-empty-lines": ["warn", { max: 2, maxEOF: 0 }],
+        "no-unused-vars": [
+            "warn",
+            {
+                args: "none",
+                caughtErrors: "none",
+                ignoreRestSiblings: true,
+                vars: "all",
+            },
+        ],
 
-    //foo = foo
-    "no-self-assign": ["error", { props: true }],
+        //prevent use of var use let/const
+        "no-var": "warn",
 
-    // foo === foo
-    "no-self-compare": "error",
+        //"array-bracket-spacing": ["warn", "never"], future discuss
 
-    //please see eslint docs will be added in future
-    "no-sequences": "error",
+        //spacing in arrow function formating
+        "arrow-spacing": ["warn", { before: true, after: true }],
 
-    // var undefined = "foo" not allowed
-    "no-shadow-restricted-names": "error",
+        //space after {} in blocks
+        "block-spacing": ["warn", "always"],
 
-    // no [,,]
-    //"no-sparse-arrays": "error", future
+        //brace style discuss formating
+        "brace-style": ["warn", "1tbs", { allowSingleLine: true }],
 
-    //no \t in code
-    "no-tabs": "error",
+        //use of camelCasing future1
+        // "camelcase": [
+        //   "error",
+        //   {
+        //     "allow": ["^UNSAFE_"],
+        //     "properties": "never",
+        //     "ignoreGlobals": true
+        //   }
+        // ],
 
-    // warn if using ${} inside ""
-    "no-template-curly-in-string": "warn",
+        "comma-dangle": [
+            "warn",
+            {
+                arrays: "never",
+                objects: "never",
+                imports: "never",
+                exports: "never",
+                functions: "never",
+            },
+        ],
 
-    //formating
-    "no-trailing-spaces": "warn",
+        // a, b not a,b or a ,b formating
+        "comma-spacing": ["warn", { before: false, after: true }],
 
-    //try to avoid
-    "no-undef": "warn",
+        // comma at the last of line in multi line formating
+        "comma-style": ["warn", "last"],
 
-    //"no-undef-init": "error", future
+        // dot before property a \n .property()
+        "dot-location": ["warn", "property"],
 
-    // see eslint
-    "no-unexpected-multiline": "warn",
+        // no new lines at end of file formating
+        "eol-last": "error",
 
-    // no modification in loop
-    "no-unmodified-loop-condition": "warn",
+        //use === instead of ==
+        eqeqeq: ["warn", "always", { null: "ignore" }],
 
-    "valid-typeof": ["warn", { requireStringLiterals: true }],
+        //no foo () always foo()
+        "func-call-spacing": ["warn", "never"],
 
-    "padding-line-between-statements": [
-      "error",
-      {
-        blankLine: "always",
-        prev: ["const", "let", "var"],
-        next: "*",
-      },
-      {
-        blankLine: "any",
-        prev: ["const", "let", "var"],
-        next: ["const", "let", "var"],
-      },
-      {
-        blankLine: "always",
-        prev: ["case", "default"],
-        next: "*",
-      },
-      {
-        blankLine: "always",
-        prev: ["block-like"],
-        next: "*",
-      },
-    ],
+        //maxiumum 2 spaces indentation
+        indent: [
+            "error",
+            2,
+            {
+                SwitchCase: 1,
+                VariableDeclarator: 1,
+                MemberExpression: 1,
+                FunctionDeclaration: { parameters: 1, body: 1 },
+                FunctionExpression: { parameters: 1, body: 1 },
+                CallExpression: { arguments: 1 },
+                ArrayExpression: 1,
+                ObjectExpression: 1,
+                ImportDeclaration: 1,
+                ignoreComments: true,
+                flatTernaryExpressions: true,
+                offsetTernaryExpressions: false,
+            },
+        ],
 
-    // "computed-property-spacing": [
-    //   "error",
-    //   "never",
-    //   { "enforceForClassMembers": true }
-    // ],
-    //"constructor-super": "error",
+        "object-curly-spacing": ["warn", "always"],
 
-    // braces for multiline if and while formating future1
-    //"curly": ["error", "multi-line"],
+        //key spacing a: b no a:b or a :b formating
+        "key-spacing": ["warn", { beforeColon: false, afterColon: true }],
 
-    //"default-case-last": "error",
+        //space after keywords
+        "keyword-spacing": ["warn", { before: true, after: true }],
 
-    //"multiline-ternary": ["error", "always-multiline"],
-    //"new-parens": "error",
-    //"no-array-constructor": "error",
+        // space betwwen to class members unless singline
+        "lines-between-class-members": [
+            "warn",
+            "always",
+            { exceptAfterSingleLine: true },
+        ],
 
-    //"no-async-promise-executor": "error",
-    //"no-caller": "error",
-    //"no-case-declarations": "error",
+        //warn at the use of console
+        "no-console": ["warn", { allow: ["error"] }],
 
-    //hazardous errors
-    // "no-class-assign": "error",
-    // "no-compare-neg-zero": "error",
-    // "no-cond-assign": "error",
-    // "no-const-assign": "error",
+        //the ability to "fall through" from one case to the next.
+        "no-fallthrough": "warn",
 
-    //"no-constant-condition": ["warn", { "checkLoops": false }],
+        "no-func-assign": "error",
 
-    //"no-control-regex": "error",
-    //"no-debugger": "error",
-    //"no-delete-var": "error",
-    //"no-dupe-args": "error",
-    //"no-dupe-class-members": "error",
-    //"no-dupe-keys": "error",
-    //"no-duplicate-case": "error",
-    //"no-useless-backreference": "error",
-    //"no-empty": ["error", { "allowEmptyCatch": true }],
-    //"no-empty-character-class": "error",
-    //"no-empty-pattern": "error",
-    //"no-eval": "error",
-    //"no-ex-assign": "error",
-    //"no-extend-native": "error",
-    //"no-extra-bind": "error",
-    //"no-extra-boolean-cast": "error",
-    //"no-extra-parens": ["error", "functions"],
+        //variable like window cannot be modified
+        "no-global-assign": "error",
 
-    //"no-floating-decimal": "error",
-    //no reassigning function
-    //"no-implied-eval": "error",
-    //"no-invalid-regexp": "error",
+        // imported values can't be reassigned
+        "no-import-assign": "error",
 
-    //disawllow __iterator__ not being used anywhere in code
-    //"no-iterator": "error",
+        // This rule is aimed at catching invalid whitespace that is not a normal tab and space
+        "no-irregular-whitespace": "error",
 
-    //"no-labels": ["error", { "allowLoop": false, "allowSwitch": false }], future
-    //"no-lone-blocks": "error", future
-    //"no-loss-of-precision": "error", future
+        "no-mixed-operators": [
+            "warn",
+            {
+                groups: [
+                    ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
+                    ["&&", "||"],
+                    ["in", "instanceof"],
+                ],
+                allowSamePrecedence: true,
+            },
+        ],
 
-    // has to with regxp search eslint for more details future
-    //"no-misleading-character-class": "warn",
+        // no tab or spaces
+        "no-mixed-spaces-and-tabs": "error",
 
-    //"no-prototype-builtins": "error",
-    //"no-useless-catch": "error",
+        //
+        "no-multi-spaces": ["warn", { ignoreEOLComments: true }],
 
-    //disallows a && b || c use brackets for these
+        //"no-multi-str": "error",
 
-    //"no-unneeded-ternary": ["error", { "defaultAssignment": false }],
+        "no-multiple-empty-lines": ["warn", { max: 2, maxEOF: 0 }],
 
-    //"no-unsafe-finally": "error", future
+        //foo = foo
+        "no-self-assign": ["error", { props: true }],
 
-    //"no-unsafe-negation": "error", future
+        // foo === foo
+        "no-self-compare": "error",
 
-    //"no-useless-call": "warn",
+        //please see eslint docs will be added in future
+        "no-sequences": "error",
 
-    //"no-this-before-super": "warn", future
+        // var undefined = "foo" not allowed
+        "no-shadow-restricted-names": "error",
 
-    //"no-throw-literal": "warn",
+        // no [,,]
+        //"no-sparse-arrays": "error", future
 
-    // "no-useless-computed-key": "error", future
-    //"no-useless-constructor": "error",
-    //"no-useless-escape": "error",
-    //"no-useless-rename": "error", future
-    //"no-useless-return": "warn",
-    //"no-void": "error",
+        //no \t in code
+        "no-tabs": "error",
 
-    //"no-whitespace-before-property": "error", future
-    //"no-with": "error",
-    // "object-curly-newline": [
-    //   "error",
-    //   { "multiline": true, "consistent": true }
-    // ],
-    //"object-curly-spacing": ["error", "always"],
+        // warn if using ${} inside ""
+        "no-template-curly-in-string": "warn",
 
-    //discuss future
-    // "object-property-newline": [
-    //   "warn",
-    //   { "allowmultiplepropertiesperline": true }
-    // ],
+        //formating
+        "no-trailing-spaces": "warn",
 
-    // obj["bar"] should be obj.bar
-    //"dot-notation": ["warn", { "allowKeywords": true }], future
+        //try to avoid
+        "no-undef": "warn",
 
-    //"no-new": "error", future
-    //"no-new-func": "error",
-    //"no-new-object": "error",
-    //"no-new-symbol": "error",
-    //"no-new-wrappers": "error",
+        //"no-undef-init": "error", future
 
-    // no math = new Math() use direct Math instead
-    //"no-obj-calls": "warn",
+        // see eslint
+        "no-unexpected-multiline": "warn",
 
-    //"no-octal": "error",
-    //"no-octal-escape": "error",
-    //"no-proto": "error", future
-    //"no-redeclare": ["error", { "builtinGlobals": false }],
-    //"no-regex-spaces": "error",
-    //"no-return-assign": ["error", "except-parens"], future
+        // no modification in loop
+        "no-unmodified-loop-condition": "warn",
 
-    //"one-var": ["error", { "initialized": "never" }],
-    // "operator-linebreak": [
-    //   "error",
-    //   "after",
-    //   { "overrides": { "?": "before", ":": "before", "|>": "before" } }
-    // ],
-    //"prefer-const": ["warn", { "destructuring": "all" }], future
-    //"prefer-promise-reject-errors": "warn",
-    //"prefer-regex-literals": ["warn", { "disallowRedundantWrapping": true }],
-    //quotes
-    // "quotes": [
-    //   "warn",
-    //   "single",
-    //   { "avoidEscape": true, "allowTemplateLiterals": false }
-    // ],
+        "valid-typeof": ["warn", { requireStringLiterals: true }],
 
-    //"rest-spread-spacing": ["warn", "never"], future
+        "padding-line-between-statements": [
+            "error",
+            {
+                blankLine: "always",
+                prev: ["const", "let", "var"],
+                next: "*",
+            },
+            {
+                blankLine: "any",
+                prev: ["const", "let", "var"],
+                next: ["const", "let", "var"],
+            },
+            {
+                blankLine: "always",
+                prev: ["case", "default"],
+                next: "*",
+            },
+            {
+                blankLine: "always",
+                prev: ["block-like"],
+                next: "*",
+            },
+        ],
 
-    //"semi": ["error", "never"],
-    //"semi-spacing": ["error", { "before": false, "after": true }], future
-    //"space-before-blocks": ["warn", "always"], future
-    //"space-before-function-paren": ["error", "always"],
+        // "computed-property-spacing": [
+        //   "error",
+        //   "never",
+        //   { "enforceForClassMembers": true }
+        // ],
+        //"constructor-super": "error",
 
-    // no space after if(x===2) formating discuss
-    //"space-in-parens": ["error", "never"],
-    //"space-infix-ops": "warn", future
-    //"space-unary-ops": ["warn", { "words": true, "nonwords": false }], future
-    //"symbol-description": "error",
-    //"template-curly-spacing": ["error", "never"],
-    //"template-tag-spacing": ["error", "never"],
-    //"unicode-bom": ["error", "never"],
-    // "use-isnan": [
-    //   "error",
-    //   {
-    //     "enforceForSwitchCase": true,
-    //     "enforceForIndexOf": true
-    //   }
-    // ],
-    //"yield-star-spacing": ["error", "both"],
-    //"yoda": ["error", "never"]
-  },
-  overrides: [
-    {
-      files: ["*.ts", "*.tsx"],
-      plugins: ["import"],
-      rules: {
-        //taken care by ts itself
-        "import/named": "off",
-        "no-unused-vars": "off",
-        "no-undef": "off",
-      },
+        // braces for multiline if and while formating future1
+        //"curly": ["error", "multi-line"],
+
+        //"default-case-last": "error",
+
+        //"multiline-ternary": ["error", "always-multiline"],
+        //"new-parens": "error",
+        //"no-array-constructor": "error",
+
+        //"no-async-promise-executor": "error",
+        //"no-caller": "error",
+        //"no-case-declarations": "error",
+
+        //hazardous errors
+        // "no-class-assign": "error",
+        // "no-compare-neg-zero": "error",
+        // "no-cond-assign": "error",
+        // "no-const-assign": "error",
+
+        //"no-constant-condition": ["warn", { "checkLoops": false }],
+
+        //"no-control-regex": "error",
+        //"no-debugger": "error",
+        //"no-delete-var": "error",
+        //"no-dupe-args": "error",
+        //"no-dupe-class-members": "error",
+        //"no-dupe-keys": "error",
+        //"no-duplicate-case": "error",
+        //"no-useless-backreference": "error",
+        //"no-empty": ["error", { "allowEmptyCatch": true }],
+        //"no-empty-character-class": "error",
+        //"no-empty-pattern": "error",
+        //"no-eval": "error",
+        //"no-ex-assign": "error",
+        //"no-extend-native": "error",
+        //"no-extra-bind": "error",
+        //"no-extra-boolean-cast": "error",
+        //"no-extra-parens": ["error", "functions"],
+
+        //"no-floating-decimal": "error",
+        //no reassigning function
+        //"no-implied-eval": "error",
+        //"no-invalid-regexp": "error",
+
+        //disawllow __iterator__ not being used anywhere in code
+        //"no-iterator": "error",
+
+        //"no-labels": ["error", { "allowLoop": false, "allowSwitch": false }], future
+        //"no-lone-blocks": "error", future
+        //"no-loss-of-precision": "error", future
+
+        // has to with regxp search eslint for more details future
+        //"no-misleading-character-class": "warn",
+
+        //"no-prototype-builtins": "error",
+        //"no-useless-catch": "error",
+
+        //disallows a && b || c use brackets for these
+
+        //"no-unneeded-ternary": ["error", { "defaultAssignment": false }],
+
+        //"no-unsafe-finally": "error", future
+
+        //"no-unsafe-negation": "error", future
+
+        //"no-useless-call": "warn",
+
+        //"no-this-before-super": "warn", future
+
+        //"no-throw-literal": "warn",
+
+        // "no-useless-computed-key": "error", future
+        //"no-useless-constructor": "error",
+        //"no-useless-escape": "error",
+        //"no-useless-rename": "error", future
+        //"no-useless-return": "warn",
+        //"no-void": "error",
+
+        //"no-whitespace-before-property": "error", future
+        //"no-with": "error",
+        // "object-curly-newline": [
+        //   "error",
+        //   { "multiline": true, "consistent": true }
+        // ],
+        //"object-curly-spacing": ["error", "always"],
+
+        //discuss future
+        // "object-property-newline": [
+        //   "warn",
+        //   { "allowmultiplepropertiesperline": true }
+        // ],
+
+        // obj["bar"] should be obj.bar
+        //"dot-notation": ["warn", { "allowKeywords": true }], future
+
+        //"no-new": "error", future
+        //"no-new-func": "error",
+        //"no-new-object": "error",
+        //"no-new-symbol": "error",
+        //"no-new-wrappers": "error",
+
+        // no math = new Math() use direct Math instead
+        //"no-obj-calls": "warn",
+
+        //"no-octal": "error",
+        //"no-octal-escape": "error",
+        //"no-proto": "error", future
+        //"no-redeclare": ["error", { "builtinGlobals": false }],
+        //"no-regex-spaces": "error",
+        //"no-return-assign": ["error", "except-parens"], future
+
+        //"one-var": ["error", { "initialized": "never" }],
+        // "operator-linebreak": [
+        //   "error",
+        //   "after",
+        //   { "overrides": { "?": "before", ":": "before", "|>": "before" } }
+        // ],
+        //"prefer-const": ["warn", { "destructuring": "all" }], future
+        //"prefer-promise-reject-errors": "warn",
+        //"prefer-regex-literals": ["warn", { "disallowRedundantWrapping": true }],
+        //quotes
+        // "quotes": [
+        //   "warn",
+        //   "single",
+        //   { "avoidEscape": true, "allowTemplateLiterals": false }
+        // ],
+
+        //"rest-spread-spacing": ["warn", "never"], future
+
+        //"semi": ["error", "never"],
+        //"semi-spacing": ["error", { "before": false, "after": true }], future
+        //"space-before-blocks": ["warn", "always"], future
+        //"space-before-function-paren": ["error", "always"],
+
+        // no space after if(x===2) formating discuss
+        //"space-in-parens": ["error", "never"],
+        //"space-infix-ops": "warn", future
+        //"space-unary-ops": ["warn", { "words": true, "nonwords": false }], future
+        //"symbol-description": "error",
+        //"template-curly-spacing": ["error", "never"],
+        //"template-tag-spacing": ["error", "never"],
+        //"unicode-bom": ["error", "never"],
+        // "use-isnan": [
+        //   "error",
+        //   {
+        //     "enforceForSwitchCase": true,
+        //     "enforceForIndexOf": true
+        //   }
+        // ],
+        //"yield-star-spacing": ["error", "both"],
+        //"yoda": ["error", "never"]
     },
-  ],
+    overrides: [
+        {
+            files: ["*.ts", "*.tsx"],
+            plugins: ["import"],
+            rules: {
+                //taken care by ts itself
+                "import/named": "off",
+                "no-unused-vars": "off",
+                "no-undef": "off",
+            },
+        },
+    ],
 };
