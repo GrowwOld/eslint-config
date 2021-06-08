@@ -22,7 +22,6 @@
     "es6": true
   },
   "rules": {
-    "@groww-tech/internal/avoid-negation-unary-if-else": "warn",
     "@groww-tech/internal/padded-blocks-bottom-if-else-try-catch": "warn",
     "@groww-tech/internal/prefer-type-alias": "warn",
     "@groww-tech/internal/two-line-above-function": "warn",
@@ -43,7 +42,8 @@
         "variables": false
       }
     ],
-    "indent": [
+    "indent":"off",
+    "@typescript-eslint/indent": [
       "error",
       2,
       {
@@ -163,6 +163,7 @@
         "after": true
       }
     ],
+    "semi-style":"warn",
     "space-before-blocks": [
       "error",
       "always"
@@ -250,7 +251,6 @@
         ]
       }
     ],
-    "no-fallthrough": "warn",
     "no-func-assign": "error",
     "no-global-assign": "error",
     "no-import-assign": "error",
