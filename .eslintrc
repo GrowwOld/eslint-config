@@ -42,7 +42,7 @@
         "variables": false
       }
     ],
-    "indent":"off",
+    "indent": "off",
     "@typescript-eslint/indent": [
       "error",
       2,
@@ -77,8 +77,12 @@
       }
     ],
     "space-before-function-paren": [
-      "error",
-      "never"
+      "warn",
+      {
+        "anonymous": "never",
+        "named": "never",
+        "asyncArrow": "always"
+      }
     ],
     "object-curly-spacing": [
       "warn",
@@ -163,7 +167,7 @@
         "after": true
       }
     ],
-    "semi-style":"warn",
+    "semi-style": "warn",
     "space-before-blocks": [
       "error",
       "always"
@@ -317,6 +321,10 @@
         "ignoreComments": true,
         "ignoreTrailingComments": true
       }
+    ],
+    "react/jsx-closing-bracket-location": [
+      1,
+      "line-aligned"
     ],
     "react/jsx-max-props-per-line": [
       "error",
