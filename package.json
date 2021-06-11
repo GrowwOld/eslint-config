@@ -1,6 +1,6 @@
 {
   "name": "@groww-tech/eslint-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Standard Eslint config adopted in Groww. Customized as per requirement and preferences of devs in Groww.",
   "main": "index.js",
   "scripts": {
@@ -50,7 +50,7 @@
     "eslint-plugin-react": "^7.23.1"
   },
   "peerDependencies": {
-    "@groww-tech/eslint-plugin-internal": "latest",
+    "@groww-tech/eslint-plugin-internal": "1.0.2",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
     "eslint": "^7.22.0",

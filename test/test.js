@@ -2,5 +2,7 @@ const a = () => {
 
 };
 
-const 
 
+const b = async () => {
+
+};
