@@ -1,3 +1,4 @@
+# !!! The repo has been migrated to [webster](https://github.com/Groww/webster)
 # eslint-config
 
 Standard Eslint config adopted in Groww. Customized as per requirement and preferences of devs in Groww.
